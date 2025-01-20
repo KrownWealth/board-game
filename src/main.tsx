@@ -10,7 +10,10 @@ createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <main className="w-full flex flex-row items-center justify-center h-screen p-12">
       <div className="w-full flex flex-row justify-between px-12">
+
+
         <DeckOpponent />
+
 
         <HandField />
 

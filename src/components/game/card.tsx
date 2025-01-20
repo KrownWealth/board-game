@@ -6,9 +6,11 @@ import "../../App.css"
 interface CardProps {
   color: string;
   image: string;
+  width?: number;
+  height?: number;
 }
 
-const Card: React.FC<CardProps> = ({ color, image }) => {
+const Card: React.FC<CardProps> = ({ color, image, width, height }) => {
   const cardRef = useRef<HTMLDivElement>(null);
   const [isFlipped, setIsFlipped] = useState(false);
 
@@ -57,6 +59,10 @@ const Card: React.FC<CardProps> = ({ color, image }) => {
       onMouseMove={handleMouseMove}
       onMouseOut={handleMouseOut}
       onClick={handleClick}
+      style={{
+        width: `${width}px`,
+        height: `${height}px`,
+      }}
     >
       <div className="front face">
         <img src={image} alt="Front" />

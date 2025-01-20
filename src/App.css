@@ -44,12 +44,12 @@
 }
 
 .card {
-  width: 100px;
-  height: 120px;
+  /* width: 100px;
+  height: 120px; */
   border-radius: 12px;
   overflow: hidden;
   position: relative;
-  margin-right: 12px;
+  /* margin-right: 12px; */
   background: var(--primary-colors);
   background-size: 400% 400%;
   animation: moveColors var(--animation-duration) linear infinite;
@@ -324,7 +324,7 @@
   width: 100%;
   height: auto;
   display: grid;
-  grid-template-rows: repeat(2, 10.15vw); 
+  grid-template-rows: repeat(1, 10.15vw); 
   grid-template-columns: repeat(5, 5vw); 
   column-gap: 4vw;
   row-gap: 0.7vw; 

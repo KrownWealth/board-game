@@ -11,7 +11,7 @@ const PlayerComponent = () => {
   return (
     <section className="card-container">
       {cardData.map((pokemon, index) => (
-        <Card key={index} color={pokemon.color} image={pokemon.image} />
+        <Card key={index} color={pokemon.color} image={pokemon.image} width={100} height={120} />
       ))}
     </section>
   )

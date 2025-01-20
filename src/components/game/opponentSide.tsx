@@ -7,10 +7,6 @@ const OpponentPlayingSide = () => {
       {Array(5).fill(null).map((_, index) => (
         <FieldCard key={`opponent-6-${index}`} />
       ))}
-
-      {Array(5).fill(null).map((_, index) => (
-        <FieldCard key={`opponent-6-${index}`} />
-      ))}
     </div>
   );
 };

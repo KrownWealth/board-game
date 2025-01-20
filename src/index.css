@@ -91,7 +91,7 @@ html, body, #root {
   /* display: flex;
   justify-content: center;
   align-items: center; */
-  background-color: rgb(3, 0, 6);
+  background: linear-gradient(to bottom, #a8d0e6, #f0f5f9); 
 }
 
 
