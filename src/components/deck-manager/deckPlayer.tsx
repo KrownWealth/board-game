@@ -1,5 +1,8 @@
-import Card from "../game/card";
+import Card from "../card";
 import FieldCard from "../game/fieldCard";
+
+
+
 
 const cardData = Array(39).fill({ color: "#ff7b00", image: "/charizard.webp" });
 const gridCardData = [
@@ -25,12 +28,13 @@ const DeckPlayer = () => {
               className="flex justify-center items-center border-2 rounded-lg
                 border-gray-300 shadow-lg w-[100px] h-[120px]"
             >
-              <Card
+              Hello
+              {/* <Card
                 color={card.color}
                 image={card.image}
-                width={80}
-                height={100}
-              />
+                width="80"
+                height="100"
+              /> */}
             </div>
           ))}
         </div>
@@ -61,7 +65,8 @@ const DeckPlayer = () => {
                 transformOrigin: "center center",
               }}
             >
-              <Card color={card.color} image={card.image} width={100} height={120} />
+              Hello
+              {/* <Card color={card.color} image={card.image} width="100" height="120" /> */}
             </div>
           ))}
         </div>

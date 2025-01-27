@@ -1,37 +1,81 @@
-import Card from './components/game/card';
-import PlayingField from './components/game/playingField';
+import React from "react";
+import CardComponent from "./components/card";
+import PlayingField from "./components/game/playingField";
+import { CardType, MonsterCard, SpellCard, TrapCard } from "../types/card";
 
-const cardData = [
-  { color: '#ff7b00', image: '/charizard.webp' },
-  { color: '#6890f0', image: '/eevee.webp' },
-  { color: '#6890f0', image: '/mewtwo.webp' },
-  { color: '#6890f0', image: '/pokemon.jpg' },
-  { color: '#6890f0', image: '/eevee.webp' },
-  { color: '#6890f0', image: '/charizard.webp' }
-];
 
-function HandField() {
+
+const jinzoMonsterCard: MonsterCard = {
+  id: "1",
+  name: "Jinzo",
+  frontImage: "/jinzo-effect-monster-card.png",
+  backImage: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/cardBack-QL475HcOmVnDdNodqQ8TWIRvrHtkA9.png",
+  type: CardType.Monster,
+  level: 7,
+  attackPoints: 2500,
+  defensePoints: 2100,
+  description: "The ultimate wizard in terms of attack and defense.",
+  cardBgColor: "#BF7245",
+  descriptBgColor: "#F2D8C2"
+};
+
+const darkHoleSpell: SpellCard = {
+  id: "dark-hole",
+  name: "Dark Hole",
+  frontImage: "/dark-hole-spell-card.png",
+  backImage: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/cardBack-QL475HcOmVnDdNodqQ8TWIRvrHtkA9.png",
+  type: CardType.Spell,
+  spellType: "Normal",
+  description: "Destroy all monsters on the field.",
+  cardBgColor: "#038C73",
+  descriptBgColor: "#CCD9D7"
+};
+
+const trapCard: TrapCard = {
+  id: "trap-hole",
+  name: "Mirror Force",
+  frontImage: "/mirror-force-trap-card.png",
+  backImage: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/cardBack-QL475HcOmVnDdNodqQ8TWIRvrHtkA9.png",
+  type: CardType.Trap,
+  trapType: "Normal",
+  description: "Activate when your opponent summons a monster with 1000+ attack points.",
+  cardBgColor: "#8B008B",
+  descriptBgColor: "#F2D5E5"
+};
+
+const HandField: React.FC = () => {
+  const opponentHand = [jinzoMonsterCard, darkHoleSpell, trapCard, jinzoMonsterCard, darkHoleSpell];
+  const playerHand = [darkHoleSpell, trapCard, jinzoMonsterCard, darkHoleSpell, trapCard];
+
+  const renderCards = (
+    cards: Array<MonsterCard | SpellCard | TrapCard>,
+    isPlayerHand: boolean
+  ) => (
+    <div className={`flex ${isPlayerHand ? "gap-2 -top-8" : ""}`}>
+      {cards.map((card) => (
+        <CardComponent key={card.id} card={card} />
+      ))}
+    </div>
+  );
+
   return (
-    <div className="w-full flex flex-col items-center justify-center h-screen">
-      {/* Opponent's Hand */}
+    <div className="w-full h-screen bg-gradient-to-b from-blue-200 to-blue-100 flex flex-col justify-between items-center">
+
       <div className="flex-grow-0 card-container ">
-        {cardData.map((pokemon, index) => (
-          <Card key={index} color={pokemon.color} image={pokemon.image} width={100} height={120} />
-        ))}
+        {renderCards(opponentHand, false)}
       </div>
+
 
       <div className="flex-grow flex items-center justify-center w-full">
         <PlayingField />
       </div>
 
-      {/* Player's Hand */}
-      <div className="flex-grow-0 player-container gap-5">
-        {cardData.map((pokemon, index) => (
-          <Card key={index} color={pokemon.color} image={pokemon.image} width={100} height={120} />
-        ))}
+
+      <div className="flex-grow-0 player-container">
+        {renderCards(playerHand, true)}
       </div>
     </div>
   );
-}
+};
 
 export default HandField;
