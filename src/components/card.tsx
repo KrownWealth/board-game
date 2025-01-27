@@ -7,11 +7,12 @@ interface CardProps {
 }
 
 const CardComponent: React.FC<CardProps> = ({ card }) => {
+
   if (!card) {
     return <div>Card not found</div>;
   }
 
-  const { name, type, description = "No description available.", frontImage, backImage, cardBgColor, descriptBgColor } = card;
+  const { name, frontImage, backImage } = card;
   const [isFlipped, setIsFlipped] = useState(false);
 
   const cardRef = useRef<HTMLDivElement>(null);
@@ -62,30 +63,10 @@ const CardComponent: React.FC<CardProps> = ({ card }) => {
       className={`relative card ${isFlipped ? 'flipped' : ''}`}
       role="button"
       aria-label={`Card: ${name}`}
-      style={{ backgroundColor: `${cardBgColor}` }}
-
     >
 
       <div className="front-side">
-        <div className="card-header" style={{ backgroundColor: `${cardBgColor}` }}>
-          <h2 className="card-title">{name}</h2>
-          <div className="icon">
-            <span className="icon-text">魔</span>
-          </div>
-        </div>
-        <div className="card-content mx-2">
-          <div className="card-type">
-            <span>[{type} CARD]</span>
-          </div>
-          <div className="card-image">
-            <img src={frontImage} alt={name} />
-          </div>
-        </div>
-        <div className="card-description"
-          style={{ backgroundColor: `${descriptBgColor}` }}>
-          <p>{description}</p>
-          <span></span>
-        </div>
+        <img src={frontImage} alt="Card Back" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
       </div>
 
       <div className="back-side absolute top-0">

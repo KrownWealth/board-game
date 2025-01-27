@@ -5,10 +5,11 @@ import { CardType, MonsterCard, SpellCard, TrapCard } from "../types/card";
 
 
 
+
 const jinzoMonsterCard: MonsterCard = {
   id: "1",
   name: "Jinzo",
-  frontImage: "/jinzo-effect-monster-card.png",
+  frontImage: "/effect-monster-template.jpeg",
   backImage: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/cardBack-QL475HcOmVnDdNodqQ8TWIRvrHtkA9.png",
   type: CardType.Monster,
   level: 7,
@@ -22,7 +23,7 @@ const jinzoMonsterCard: MonsterCard = {
 const darkHoleSpell: SpellCard = {
   id: "dark-hole",
   name: "Dark Hole",
-  frontImage: "/dark-hole-spell-card.png",
+  frontImage: "/spell-card-template.png",
   backImage: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/cardBack-QL475HcOmVnDdNodqQ8TWIRvrHtkA9.png",
   type: CardType.Spell,
   spellType: "Normal",
@@ -34,7 +35,7 @@ const darkHoleSpell: SpellCard = {
 const trapCard: TrapCard = {
   id: "trap-hole",
   name: "Mirror Force",
-  frontImage: "/mirror-force-trap-card.png",
+  frontImage: "/trap-card-template.jpeg",
   backImage: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/cardBack-QL475HcOmVnDdNodqQ8TWIRvrHtkA9.png",
   type: CardType.Trap,
   trapType: "Normal",

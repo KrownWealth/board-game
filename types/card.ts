@@ -21,12 +21,12 @@ export type Card = {
   name: string;
   frontImage: string;
   backImage: string;
-  type: CardType;
+  type?: CardType;
   description?: string;
   rotation?: CardRotation;
   orientation?: CardOrientation;
   cardBgColor?: string;
-  descriptBgColor: string;
+  descriptBgColor?: string;
 };
 
 export interface MonsterCard extends Card {

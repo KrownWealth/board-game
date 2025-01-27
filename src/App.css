@@ -56,12 +56,12 @@
   position: absolute;
   backface-visibility: hidden; 
   -webkit-backface-visibility: hidden;
-  border-radius: 4px;
+  /* border-radius: 4px;
   padding: 8px;
   display: flex;
   flex-direction: column;
   gap: 4px;
-  border: 6px solid #142426;
+  border: 6px solid #142426; */
 }
 
 
