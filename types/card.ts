@@ -19,13 +19,13 @@ export enum CardOrientation {
 export type Card = {
   id: string;
   name: string;
+  templateImage: string;
   frontImage: string;
   backImage: string;
   type?: CardType;
   description?: string;
   rotation?: CardRotation;
   orientation?: CardOrientation;
-  cardBgColor?: string;
   descriptBgColor?: string;
 };
 

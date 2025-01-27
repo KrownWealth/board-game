@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 // import DeckOpponent from './components/deck-manager/deckOpponent'
 // import DeckPlayer from './components/deck-manager/deckPlayer'
-import HandField from './App'
+import App from './App'
 
 
 createRoot(document.getElementById('root')!).render(
@@ -15,7 +15,7 @@ createRoot(document.getElementById('root')!).render(
         {/* <DeckOpponent /> */}
 
 
-        <HandField />
+        <App />
 
         {/* <DeckPlayer /> */}
       </div>
