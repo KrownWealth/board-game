@@ -1,11 +1,11 @@
-import Card from '../card';
-import FieldCard from '../game/fieldCard';
+// import Card from '../card';
+// import FieldCard from '../game/fieldCard';
 
-const cardData = Array(39).fill({ color: '#ff7b00', image: '/charizard.webp' });
-const gridCardData = [
-  { color: '#ff7b00', image: '/charizard.webp' },
-  { color: '#6890f0', image: '/eevee.webp' },
-];
+// const cardData = Array(39).fill({ color: '#ff7b00', image: '/charizard.webp' });
+// const gridCardData = [
+//   { color: '#ff7b00', image: '/charizard.webp' },
+//   { color: '#6890f0', image: '/eevee.webp' },
+// ];
 
 const DeckOpponent = () => {
   return (
@@ -17,7 +17,7 @@ const DeckOpponent = () => {
         transition: 'transform 0.5s',
       }}
     >
-      <div className="grid grid-rows-2 gap-8">
+      {/* <div className="grid grid-rows-2 gap-8">
         <div
           className="relative"
           style={{
@@ -70,7 +70,7 @@ const DeckOpponent = () => {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

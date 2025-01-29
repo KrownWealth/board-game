@@ -2,8 +2,9 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 // import DeckOpponent from './components/deck-manager/deckOpponent'
-// import DeckPlayer from './components/deck-manager/deckPlayer'
 import App from './App'
+import Deck from './components/deck-manager/deckPlayer'
+import DeckPlayer from './components/deck-manager/deckPlayer'
 
 
 createRoot(document.getElementById('root')!).render(
@@ -17,7 +18,7 @@ createRoot(document.getElementById('root')!).render(
 
         <App />
 
-        {/* <DeckPlayer /> */}
+        <DeckPlayer />
       </div>
     </main>
 

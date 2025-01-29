@@ -16,7 +16,7 @@ export const jinzoMonsterCard: MonsterCard = {
 };
 
 export const darkHoleSpell: SpellCard = {
-  id: "dark-hole",
+  id: "2",
   name: "Dark Hole",
   templateImage: "/spell-card-template.png",
   frontImage: "/dark-hole-spell-card.png",
@@ -29,7 +29,7 @@ export const darkHoleSpell: SpellCard = {
 };
 
 export const trapCard: TrapCard = {
-  id: "trap-hole",
+  id: "3",
   name: "Mirror Force",
   templateImage: "/trap-card-template.jpeg",
   frontImage: "/mirror-force-trap-card.png",
