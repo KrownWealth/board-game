@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { jinzoMonsterCard, darkHoleSpell, trapCard } from "@/constants/cardData";
 import "./deck.css"
 import CardComponent from "../card";
@@ -7,14 +6,13 @@ import CardComponent from "../card";
 
 const Deck = () => {
   const baseDeck = [jinzoMonsterCard, darkHoleSpell, trapCard];
-  const fullDeck = Array.from({ length: 52 }, (_, i) => baseDeck[i % baseDeck.length]);
+  const fullDeck = Array.from({ length: 39 }, (_, i) => baseDeck[i % baseDeck.length]);
 
-  const [deck, setDeck] = useState(fullDeck);
 
   return (
     <div className="container-deck">
-      <div className="deck" style={{ height: `${deck.length * 0.5}rem` }}>
-        {deck.map((card, index) => (
+      <div className="deck" style={{ height: `${fullDeck.length * 0.5}rem` }}>
+        {fullDeck.map((card, index) => (
           <div
             key={`${card.id}-${index}`}
             className="stacked-card"
@@ -22,7 +20,7 @@ const Deck = () => {
               "--i": index,
             } as React.CSSProperties}
           >
-            <CardComponent card={card} />
+            <CardComponent card={card} isFlippable={false} />
           </div>
         ))}
       </div>

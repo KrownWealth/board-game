@@ -4,7 +4,6 @@ import PlayingField from "./components/game/playingField";
 import { MonsterCard, SpellCard, TrapCard } from "../types/card";
 import { jinzoMonsterCard, darkHoleSpell, trapCard } from "./constants/cardData";
 
-
 interface HandFieldProps {
   opponentHand: Array<MonsterCard | SpellCard | TrapCard>;
   playerHand: Array<MonsterCard | SpellCard | TrapCard>;
@@ -20,8 +19,8 @@ const HandField: React.FC<HandFieldProps> = ({ opponentHand, playerHand }) => {
   );
 
   return (
-    <div className="w-full h-screen bg-gradient-to-b from-blue-200 to-blue-100 flex flex-col justify-between items-center">
-      <div className="flex-grow-0 card-container ">
+    <div className="w-full h-screen bg-gradient-to-b from-blue-200 to-blue-100 flex flex-col justify-between items-center overflow-hidden">
+      <div className="flex-grow-0 card-container">
         {renderCards(opponentHand, false)}
       </div>
 
@@ -35,8 +34,6 @@ const HandField: React.FC<HandFieldProps> = ({ opponentHand, playerHand }) => {
     </div>
   );
 };
-
-
 
 const App: React.FC = () => {
   const opponentHand = [jinzoMonsterCard, darkHoleSpell, trapCard, jinzoMonsterCard, darkHoleSpell];

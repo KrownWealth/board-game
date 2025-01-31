@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import { Card, CardType } from "../../types/card";
 
-
 interface CardProps {
   card?: Card;
+  isFlippable?: boolean;
 }
 
-const CardComponent: React.FC<CardProps> = ({ card }) => {
-
+const CardComponent: React.FC<CardProps> = ({ card, isFlippable = true }) => {
   if (!card) {
     return <div>Card not found</div>;
   }
@@ -15,10 +14,10 @@ const CardComponent: React.FC<CardProps> = ({ card }) => {
   const { name, templateImage, frontImage, backImage, description, type } = card;
   const [isFlipped, setIsFlipped] = useState(false);
 
-  ;
-
   const handleClick = () => {
-    setIsFlipped(!isFlipped);
+    if (isFlippable) {
+      setIsFlipped((prev) => !prev);
+    }
   };
 
   const getCardTitleLeftPosition = (cardType?: CardType) => {
@@ -41,33 +40,26 @@ const CardComponent: React.FC<CardProps> = ({ card }) => {
       role="button"
       aria-labelledby={`card-title-${name}`}
     >
-
       <div className="front-side">
         <img src={templateImage} alt={`${name} template`} />
-
-        <div className={`absolute top-[4.5%] ${getCardTitleLeftPosition(type)} left-[20%] transform
-         -translate-x-1/2 text-start text-xs font-bold uppercase text-black`}>
+        <div className={`absolute top-[4.5%] ${getCardTitleLeftPosition(type)} transform -translate-x-1/2 text-start text-xs font-bold uppercase text-black`}>
           {name}
         </div>
 
         {/* Card Image */}
         <div className="absolute top-[18%] left-[10%] w-[80%] h-[52%]">
-          <img
-            src={frontImage}
-            alt="Card Illustration"
-            className="w-full h-full object-cover"
-          />
+          <img src={frontImage} alt="Card Illustration" className="w-full h-full object-cover" />
         </div>
+
+        {/* Card Description */}
         <div className="card-description absolute top-[75%] left-[10%] w-[80%] h-[40%]">
           <p>{description}</p>
         </div>
       </div>
 
-
       <div className="back-side absolute top-0">
         <img src={backImage} alt={`${name} back`} />
       </div>
-
     </div>
   );
 };

@@ -1,16 +1,15 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import './index.css';
-import DeckOpponent from './components/deck-manager/deckOpponent';
+import DeckField from './components/deck-manager/deckField';
 import App from './App';
-import DeckPlayer from './components/deck-manager/deckPlayer';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <main className="w-full flex flex-row items-center justify-center h-screen p-12">
-      <DeckOpponent />
+    <main className="w-full flex flex-row items-center justify-center h-screen overflow-hidden p-12">
+      <DeckField role="opponent" />
       <App />
-      <DeckPlayer />
+      <DeckField role="player" />
     </main>
   </StrictMode>,
 );
