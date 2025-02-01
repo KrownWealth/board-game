@@ -6,7 +6,7 @@ import CardComponent from "../card";
 
 const Deck = () => {
   const baseDeck = [jinzoMonsterCard, darkHoleSpell, trapCard];
-  const fullDeck = Array.from({ length: 39 }, (_, i) => baseDeck[i % baseDeck.length]);
+  const fullDeck = Array.from({ length: 10 }, (_, i) => baseDeck[i % baseDeck.length]);
 
 
   return (

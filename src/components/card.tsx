@@ -4,15 +4,16 @@ import { Card, CardType } from "../../types/card";
 interface CardProps {
   card?: Card;
   isFlippable?: boolean;
+  isDeck?: boolean;
 }
 
-const CardComponent: React.FC<CardProps> = ({ card, isFlippable = true }) => {
+const CardComponent: React.FC<CardProps> = ({ card, isFlippable = true, isDeck = true }) => {
   if (!card) {
     return <div>Card not found</div>;
   }
 
   const { name, templateImage, frontImage, backImage, description, type } = card;
-  const [isFlipped, setIsFlipped] = useState(false);
+  const [isFlipped, setIsFlipped] = useState(isDeck);
 
   const handleClick = () => {
     if (isFlippable) {
@@ -57,7 +58,7 @@ const CardComponent: React.FC<CardProps> = ({ card, isFlippable = true }) => {
         </div>
       </div>
 
-      <div className="back-side absolute top-0">
+      <div className="back-side absolute top-0 ">
         <img src={backImage} alt={`${name} back`} />
       </div>
     </div>

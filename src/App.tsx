@@ -13,7 +13,7 @@ const HandField: React.FC<HandFieldProps> = ({ opponentHand, playerHand }) => {
   const renderCards = (cards: Array<MonsterCard | SpellCard | TrapCard>, isPlayerHand: boolean) => (
     <div className={`flex ${isPlayerHand ? "gap-2 -top-8" : ""}`}>
       {cards.map((card) => (
-        <CardComponent key={card.id} card={card} />
+        <CardComponent key={card.id} card={card} isFlippable={isPlayerHand} isDeck={!isPlayerHand} />
       ))}
     </div>
   );

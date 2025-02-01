@@ -1,22 +1,24 @@
 .container-deck {
-  position: fixed;
-  top: 5%;
-  left: 10%;
+  position: relative;
+  top: 0;
+  left: 0;
   transform: translate(-40%, -40%);
 }
 
 .deck {
   position: relative;
-  width: 4rem;
-  min-height: 6rem;
-  transition: height 0.3s ease-in-out;
+  width: 4rem; /* Fixed width for the deck */
+  min-height: 6rem; /* Minimum height to accommodate stacked cards */
+  
 }
 
 .stacked-card {
   position: absolute;
-  left: 0;
-  top: 0;
-  transform: translateY(calc(var(--i) * 3px));
-  z-index: calc(100 - var(--i)); 
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  left: 0; /* Align cards to the left */
+  top: 0; /* Start stacking from the top */
+  transform: translateY(calc(var(--i) * 4px)); /* Space out cards vertically */
+  z-index: calc(100 - var(--i)); /* Ensure proper stacking order */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Slightly enhanced shadow for depth */
+  /* opacity: calc(1 - var(--i) * 0.1); 
+  transition: opacity 0.3s ease, transform 0.3s ease;  */
 }
