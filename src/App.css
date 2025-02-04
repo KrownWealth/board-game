@@ -36,7 +36,7 @@
 
 
 .card {
-  width: 164px;
+  width: 154px;
   height: 242px;
   perspective: 1000px; 
   cursor: pointer;
@@ -82,46 +82,3 @@
 
 
 
-/*Playin Field*/
-.field-mat {
-  width: 100%;
-  max-width: 1200px;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  /* background: linear-gradient(to bottom, #a8d0e6, #f0f5f9);  */
-  /* border: 2px solid #ccc;  */
-  padding: 4px;
-}
-
-.opponent-side {
-  width: 100%;
-  height: auto;
-  display: grid;
-  grid-template-rows: repeat(2, 10.15vw);
-  grid-template-columns: repeat(5, 5vw);
-  column-gap: 4vw;
-  row-gap: 0.7vw;
-  justify-content: center;
-  justify-items: center;
-  align-content: center;
-  align-items: center;
-  transform: rotate(180deg);
-}
-
-.player-side {
-  width: 100%;
-  height: auto;
-  position: relative;
-  display: grid;
-  grid-template-columns: repeat(5, 5vw);
-  grid-template-rows: repeat(2, 10.15vw);
-  column-gap: 4vw;
-  row-gap: 0.7vw;
-  justify-content: center;
-  justify-items: center;
-  align-content: center;
-  align-items: center;
-}

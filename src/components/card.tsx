@@ -48,12 +48,12 @@ const CardComponent: React.FC<CardProps> = ({ card, isFlippable = true, isDeck =
         </div>
 
         {/* Card Image */}
-        <div className="absolute top-[18%] left-[10%] w-[80%] h-[52%]">
+        <div className="absolute top-[16%] left-[10%] w-[80%] h-[50%]">
           <img src={frontImage} alt="Card Illustration" className="w-full h-full object-cover" />
         </div>
 
         {/* Card Description */}
-        <div className="card-description absolute top-[75%] left-[10%] w-[80%] h-[40%]">
+        <div className="card-description absolute top-[70%] left-[10%] w-[80%] h-[40%]">
           <p>{description}</p>
         </div>
       </div>
