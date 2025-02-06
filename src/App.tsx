@@ -1,7 +1,6 @@
 import React from "react";
 import CardZone from "./components/cardZone";
-import OpponentHand from "./components/opponentHand";
-import PlayerHand from "./components/playerHand";
+import Hand from "./components/hand";
 import { jinzoMonsterCard, trapCard, darkHoleSpell } from "./constants/cardData";
 import "./App.css";
 
@@ -10,9 +9,9 @@ const cards = [jinzoMonsterCard, trapCard, darkHoleSpell, jinzoMonsterCard, trap
 const App: React.FC = () => {
   return (
     <div className="flex h-screen w-full p-4 justify-center items-start overflow-hidden">
-      <OpponentHand opponentHand={cards} />
+      <Hand cards={cards} isOpponent={true} />
       <CardZone cards={cards} />
-      <PlayerHand playerHand={cards} />
+      <Hand cards={cards} isOpponent={false} />
     </div>
   );
 };

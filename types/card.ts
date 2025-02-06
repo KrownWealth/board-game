@@ -5,10 +5,10 @@ export enum CardType {
 }
 
 export enum CardRotation {
-  Up = "Up",
-  Right = "Right",
-  Left = "Left",
-  Down = "Down",
+  Up = "Up", // Default vertical orientation
+  Right = "Right", // Rotated 90° to the right
+  Left = "Left", // Rotated 90° to the left
+  Down = "Down", // Rotated 180°
 }
 
 export enum CardOrientation {
