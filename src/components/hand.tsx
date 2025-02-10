@@ -10,7 +10,8 @@ interface HandProps {
 const Hand: React.FC<HandProps> = ({ cards, isOpponent }) => {
   return (
     <div
-      className={`absolute w-full flex flex-row justify-center ${isOpponent ? "top-0" : "bottom-0 gap-2"}`}
+      className={`absolute w-full flex flex-row justify-center ${isOpponent ? "top-0 gap-0" : "bottom-0 gap-2"}`}
+      style={{ zIndex: 10 }}
     >
       {cards.map((card) => (
         <CardComponent
@@ -25,5 +26,6 @@ const Hand: React.FC<HandProps> = ({ cards, isOpponent }) => {
     </div>
   );
 };
+;
 
 export default Hand;

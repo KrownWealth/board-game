@@ -1,15 +1,4 @@
-:root {
-  --primary-colors: linear-gradient(
-    120deg,
-    hsl(0, 57%, 37%),
-    hsl(40, 53%, 39%),
-    hsl(90, 60%, 35%),
-    hsl(210, 57%, 39%),
-    hsl(280, 55%, 31%)
-  );
-   
-}
-
+ 
 .card {
   /* width: 154px;
   height: 242px; */
@@ -51,7 +40,8 @@
 
 
 .card-description p {
-  font-size: 0.5rem;
+  font-size: 0.4rem;
+  word-wrap: break-word;
 }
 
 

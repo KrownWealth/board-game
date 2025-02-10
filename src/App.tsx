@@ -1,8 +1,10 @@
 import React from "react";
-import CardZone from "./components/cardZone";
+
 import Hand from "./components/hand";
 import { jinzoMonsterCard, trapCard, darkHoleSpell } from "./constants/cardData";
 import "./App.css";
+import CardZone from "./components/cardZone";
+
 
 const cards = [jinzoMonsterCard, trapCard, darkHoleSpell, jinzoMonsterCard, trapCard];
 
