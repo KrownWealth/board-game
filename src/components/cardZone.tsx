@@ -18,7 +18,7 @@ const CardZone: React.FC<CardZoneProps> = () => {
         gridTemplateRows: "repeat(5, 1fr)",
         columnGap: "1vw",
         rowGap: "2vw",
-        transform: "perspective(1500px) rotateX(65deg) scale(0.42) translate(15px, -620px)",
+        transform: "perspective(1500px) rotateX(55deg) scale(0.45) translate(15px, -760px)",
         transition: "transform 0.5s",
       }}
     >

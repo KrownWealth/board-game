@@ -21,7 +21,7 @@ const CardComponent: React.FC<CardProps> = ({
   card,
   isFaceUp = true,
   width = "154px",
-  height = "242px",
+  height = "220px",
   isOpponent = false,
   isInCardZone = true,
 }) => {
@@ -82,10 +82,10 @@ const CardComponent: React.FC<CardProps> = ({
           <div className={`absolute top-[4.5%] ${getCardTitleLeftPosition(type)} transform -translate-x-1/2 text-start text-xs font-bold uppercase text-black`}>
             {name}
           </div>
-          <div className="absolute top-[16%] left-[10%] w-[80%] h-[50%]">
+          <div className="absolute top-[19%] left-0 w-[100%] h-[54%]">
             <img src={frontImage} alt="Card Illustration" className="w-full h-full object-contain" />
           </div>
-          <div className="card-description absolute top-[70%] left-[10%] w-[80%] h-[40%]">
+          <div className="card-description absolute top-[76%] left-[10%] w-[80%] h-[40%]">
             <p>{description}</p>
           </div>
         </div>

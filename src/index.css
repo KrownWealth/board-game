@@ -110,6 +110,7 @@ html, body, #root {
   justify-content: center;
   align-items: center; */
   background: linear-gradient(to bottom, #a8d0e6, #f0f5f9); 
+  overflow: hidden;
 }
 
 

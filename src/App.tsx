@@ -10,7 +10,7 @@ const cards = [jinzoMonsterCard, trapCard, darkHoleSpell, jinzoMonsterCard, trap
 
 const App: React.FC = () => {
   return (
-    <div className="flex h-screen w-full p-4 justify-center items-start overflow-hidden">
+    <div className="flex h-screen w-full justify-center items-start overflow-hidden">
       <Hand cards={cards} isOpponent={true} />
       <CardZone cards={cards} />
       <Hand cards={cards} isOpponent={false} />
